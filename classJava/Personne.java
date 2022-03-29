@@ -2,15 +2,15 @@ package classJava;
 
 import java.time.LocalDate;
 
-public class Personne {
+public class Personne extends EtreVivant{
     private String nom;
     private String prenom;
     private LocalDate dateNaissance;
     private static int nbInstance;
 
-
     // constructeur
-    public Personne(String nom, String prenom, LocalDate dateNaissance) {
+    public Personne(double taille, double poids, String nom, String prenom, LocalDate dateNaissance){
+        super(taille, poids);
         this.nom = nom;
         this.prenom = prenom;
         this.dateNaissance = dateNaissance;
@@ -66,5 +66,10 @@ public class Personne {
     @Override
     protected void finalize() {
         System.out.println("Personne.finalize()");
+    }
+
+    @Override
+    public void respirer() {
+        System.out.println("Respirer de l'air");
     }
 }

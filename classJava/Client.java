@@ -7,12 +7,13 @@ public class Client extends Personne{
     // P -> particulier | E-> entreprise | A -> administration
     private char type;
 
-    public Client(String nom, String prenom, LocalDate dateNaissance, char type) {
-        super(nom, prenom, dateNaissance);
+    public Client(double taille, double poids, String nom, String prenom, LocalDate dateNaissance, char type) {
+        super(taille, poids, nom, prenom, dateNaissance);
         this.type = type;
     }
 
     public void afficher(){
+        super.afficher();
         System.out.println("Type : " + this.getType());
     }
 
