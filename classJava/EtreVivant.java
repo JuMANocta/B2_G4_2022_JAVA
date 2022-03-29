@@ -13,7 +13,7 @@ public abstract class EtreVivant {
         System.out.println("Je me deplace");
     }
     public abstract void respirer();
-    
+
     public void manger(){
         System.out.println("Je mange");
     }
@@ -23,7 +23,7 @@ public abstract class EtreVivant {
     public void seReproduire(){
         System.out.println("Je se reproduit");
     }
-    public void mourrir(){
+    final public void mourrir(){
         System.out.println("Je meurs");
     }
 
@@ -42,6 +42,4 @@ public abstract class EtreVivant {
     public double getPoids() {
         return this.poids;
     }
-
-
 }

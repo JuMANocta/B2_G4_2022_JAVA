@@ -2,7 +2,7 @@ package classJava;
 
 import java.time.LocalDate;
 
-public class Client extends Personne{
+final public class Client extends Personne{
     // déterminer le type de client
     // P -> particulier | E-> entreprise | A -> administration
     private char type;

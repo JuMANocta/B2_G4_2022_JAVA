@@ -2,7 +2,7 @@ package classJava;
 
 import java.time.LocalDate;
 
-public class Personne extends EtreVivant{
+public class Personne extends EtreVivant implements Classable {
     private String nom;
     private String prenom;
     private LocalDate dateNaissance;
@@ -71,5 +71,21 @@ public class Personne extends EtreVivant{
     @Override
     public void respirer() {
         System.out.println("Respirer de l'air");
+    }
+
+    @Override
+    public int comparer(Object o) {
+        if(o instanceof Personne){
+            Personne p = (Personne) o;
+            if(this.getTaille() > p.getTaille()){
+                return SUPERIEUR;
+            } else if(this.getTaille() < p.getTaille()){
+                return INFERIEUR;
+            } else {
+                return EGAL;
+            }
+        } else {
+            return ERREUR;
+        }
     }
 }

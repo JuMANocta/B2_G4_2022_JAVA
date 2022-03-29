@@ -12,11 +12,12 @@ public class App {
         p.afficher();
         p.afficher(false);
 
-        Client c = new Client(180.0, 90.0, "Dupont", "Jean", LocalDate.of(1980, 3, 29), 'P');
+        Client c = new Client(179.0, 90.0, "Dupont", "Jean", LocalDate.of(1980, 3, 29), 'P');
         Client c2 = new Client(180.0, 90.0, "Dupond", "Yves", LocalDate.of(1983, 3, 29), 'P');
         c.afficher();
         c.mourrir();
         Poisson poisson = new Poisson(1.0, 1.0, "bleu", "poisson");
         poisson.respirer();
+        System.out.println(c2.comparer(c));
     }
 }
