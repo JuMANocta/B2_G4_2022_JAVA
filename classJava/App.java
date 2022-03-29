@@ -11,5 +11,9 @@ public class App {
         System.out.println(p.getNom() + " " + p.getPrenom() + " " + p.calculerAge(p.getDateNaissance()));
         p.afficher();
         p.afficher(false);
+
+        Client c = new Client("Dupont", "Jean", LocalDate.of(1980, 3, 29), 'P');
+        Client c2 = new Client("Dupond", "Yves", LocalDate.of(1983, 3, 29), 'P');
+        c.afficher();
     }
 }
