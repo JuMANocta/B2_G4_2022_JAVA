@@ -1,6 +1,7 @@
 package classJava;
 
 import java.time.LocalDate;
+import java.util.Arrays;
 
 public class App {
     public static void main(String[] args) {
@@ -19,5 +20,19 @@ public class App {
         Poisson poisson = new Poisson(1.0, 1.0, "bleu", "poisson");
         poisson.respirer();
         System.out.println(c2.comparer(c));
+    }
+
+    public void testFournisseur(){
+        Fournisseur f1 = new Fournisseur("nextIp");
+        Fournisseur f2 = new Fournisseur("IpNext");
+        Fournisseur f3 = new Fournisseur("Aco");
+
+        System.out.println(f1.compareTo(f2));
+
+        Fournisseur[] fournisseurs = new Fournisseur[3];
+        fournisseurs[0] = f1;
+        fournisseurs[1] = f2;
+        fournisseurs[2] = f3;
+        Arrays.sort(fournisseurs);
     }
 }
